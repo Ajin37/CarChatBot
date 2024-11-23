@@ -20,8 +20,8 @@ logging.basicConfig(
 )
 
 # Access API keys from Streamlit secrets (instead of .env)
-GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
-TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]["key"]
+TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]["key"]
 
 if not GROQ_API_KEY or not TAVILY_API_KEY:
     logging.error("Missing required API keys. Please check your Streamlit secrets.")
