@@ -1,0 +1,18 @@
+2024-11-22 15:22:40,797 - INFO - [streamlit_app.py:40] - Setting up the state graph...
+2024-11-22 15:22:40,800 - INFO - [streamlit_app.py:50] - Tavily tool initialized successfully
+2024-11-22 15:22:41,090 - DEBUG - [_config.py:82] - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-22 15:22:41,092 - DEBUG - [_config.py:148] - load_verify_locations cafile='C:\\Users\\APJ\\OneDrive\\Desktop\\Final_Project\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-11-22 15:22:41,593 - DEBUG - [_config.py:82] - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-22 15:22:41,595 - DEBUG - [_config.py:148] - load_verify_locations cafile='C:\\Users\\APJ\\OneDrive\\Desktop\\Final_Project\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-11-22 15:22:42,129 - INFO - [streamlit_app.py:58] - ChatGroq LLM initialized successfully
+2024-11-22 15:22:42,131 - INFO - [streamlit_app.py:77] - State graph setup completed successfully
+2024-11-22 15:22:42,132 - INFO - [streamlit_app.py:116] - Session state initialized successfully
+2024-11-22 16:59:52,046 - INFO - [streamlit_app.py:40] - Setting up the state graph...
+2024-11-22 16:59:52,048 - INFO - [streamlit_app.py:50] - Tavily tool initialized successfully
+2024-11-22 16:59:52,361 - DEBUG - [_config.py:82] - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-22 16:59:52,363 - DEBUG - [_config.py:148] - load_verify_locations cafile='C:\\Users\\APJ\\OneDrive\\Desktop\\Final_Project\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-11-22 16:59:52,896 - DEBUG - [_config.py:82] - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-22 16:59:52,898 - DEBUG - [_config.py:148] - load_verify_locations cafile='C:\\Users\\APJ\\OneDrive\\Desktop\\Final_Project\\venv\\Lib\\site-packages\\certifi\\cacert.pem'
+2024-11-22 16:59:53,554 - INFO - [streamlit_app.py:58] - ChatGroq LLM initialized successfully
+2024-11-22 16:59:53,558 - INFO - [streamlit_app.py:77] - State graph setup completed successfully
+2024-11-22 16:59:53,560 - INFO - [streamlit_app.py:116] - Session state initialized successfully
