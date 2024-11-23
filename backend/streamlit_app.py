@@ -1,6 +1,4 @@
-import os
 import logging
-from dotenv import load_dotenv
 import streamlit as st
 from langgraph.graph import StateGraph, START
 from langgraph.graph.message import add_messages
@@ -21,13 +19,12 @@ logging.basicConfig(
     ]
 )
 
-# Load environment variables with validation
-load_dotenv()
-GROQ_API_KEY = os.getenv('GROQ_API_KEY')
-TAVILY_API_KEY = os.getenv('TAVILY_API_KEY')
+# Access API keys from Streamlit secrets (instead of .env)
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]
 
 if not GROQ_API_KEY or not TAVILY_API_KEY:
-    logging.error("Missing required API keys. Please check your .env file.")
+    logging.error("Missing required API keys. Please check your Streamlit secrets.")
     raise ValueError("Missing required API keys")
 
 class State(TypedDict):
