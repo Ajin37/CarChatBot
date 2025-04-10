@@ -1,5 +1,7 @@
 import logging
 import streamlit as st
+import os
+from dotenv import load_dotenv
 from langgraph.graph import StateGraph, START
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
@@ -19,9 +21,18 @@ logging.basicConfig(
     ]
 )
 
+load_dotenv()
+
 # Access API keys from Streamlit secrets (instead of .env)
-GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
-TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]
+if "ST_SECRETS" in os.environ:
+    # Production: Use Streamlit secrets
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+    TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]
+else:
+    # Development: Use .env file
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+    TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+
 
 if not GROQ_API_KEY or not TAVILY_API_KEY:
     logging.error("Missing required API keys. Please check your Streamlit secrets.")
@@ -48,7 +59,7 @@ def setup_graph():
 
         # Configure LLM without tool binding
         llm = ChatGroq(
-            model="gemma-7b-it",
+            model="llama-3.1-8b-instant",
             temperature=0.7,  # Increased temperature for more natural responses
             api_key=GROQ_API_KEY
         )
